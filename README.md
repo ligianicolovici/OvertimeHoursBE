@@ -1,5 +1,5 @@
-# Liberty getting started application
-The Getting Started tutorial for Liberty uses this sample application to provide you with a sample workflow for working with any Liberty app on IBM Cloud or in IBM Cloud Private; you set up a development environment, deploy an app locally and on the cloud, and then integrate an IBM Cloud database service in your app.
+# Liberty getting started overtimehours
+The Getting Started tutorial for Liberty uses this sample overtimehours to provide you with a sample workflow for working with any Liberty app on IBM Cloud or in IBM Cloud Private; you set up a development environment, deploy an app locally and on the cloud, and then integrate an IBM Cloud database service in your app.
 
 The Liberty app may use either the [Cloudant Java Client](https://github.com/cloudant/java-cloudant) or the [MongoDB Java Client](https://mongodb.github.io/mongo-java-driver) to add information to a database and then return information from a database to the UI.
 
@@ -19,6 +19,6 @@ You'll need a [IBM Cloud account](https://console.ng.bluemix.net/registration/),
 
 **IBM Cloud Kubernetes Service**: [README_kubernetes.md](README_kubernetes.md)
 
-**IBM Cloud Private**: The starter application for IBM Cloud Private guides you through a similar process. However, instead of hosting both your service and application in the same cloud environment, you use a user-provided service. This guide shows you how to deploy your application to IBM Cloud Private and bind it to a Cloudant Database in IBM Cloud. For the complete procedure, see [Working with user-provided services and the Liberty starter app](https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0/cloud_foundry/buildpacks/buildpacks_using_Libertyapp.html).
+**IBM Cloud Private**: The starter overtimehours for IBM Cloud Private guides you through a similar process. However, instead of hosting both your service and overtimehours in the same cloud environment, you use a user-provided service. This guide shows you how to deploy your overtimehours to IBM Cloud Private and bind it to a Cloudant Database in IBM Cloud. For the complete procedure, see [Working with user-provided services and the Liberty starter app](https://www.ibm.com/support/knowledgecenter/SSBS6K_2.1.0/cloud_foundry/buildpacks/buildpacks_using_Libertyapp.html).
 
 ## 

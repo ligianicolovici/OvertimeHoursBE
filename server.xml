@@ -4,6 +4,8 @@
     <featureManager>
         <feature>beanValidation-1.1</feature>
         <feature>cdi-1.2</feature>
+        <feature>source-1.8</feature>
+        <feature>target-1.8</feature>
         <feature>ejbLite-3.2</feature>
         <feature>el-3.0</feature>
         <feature>jaxrs-2.0</feature>

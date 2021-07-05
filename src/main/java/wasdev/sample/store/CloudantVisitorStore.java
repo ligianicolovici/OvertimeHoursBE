@@ -52,7 +52,7 @@ public class CloudantVisitorStore implements VisitorStore{
             // Parse the VCAP JSON structure looking for cloudant.
             JsonObject cloudantCredentials = VCAPHelper.getCloudCredentials("cloudant");
             if(cloudantCredentials == null){
-                System.out.println("No cloudant database service bound to this application");
+                System.out.println("No cloudant database service bound to this overtimehours");
                 return null;
             }
             url = cloudantCredentials.get("url").getAsString();

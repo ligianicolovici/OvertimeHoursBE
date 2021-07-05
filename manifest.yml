@@ -1,7 +1,10 @@
 ---
 applications:
- - name: GetStartedJava
+ - name: Overtime-BE
    random-route: true
-   path: target/GetStartedJava.war
+   path: target/Overtime-BE.war
    memory: 256M
    instances: 1
+   spring:
+     main:
+       web-application-type: none

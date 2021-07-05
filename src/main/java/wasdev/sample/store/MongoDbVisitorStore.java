@@ -234,7 +234,7 @@ public class MongoDbVisitorStore implements VisitorStore {
             JsonObject mongoCredentials = VCAPHelper.getCloudCredentials("mongodb");
 
             if (mongoCredentials == null) {
-                System.out.println("No MongoDB database service bound to this application");
+                System.out.println("No MongoDB database service bound to this overtimehours");
                 return null;
             }
             url = mongoCredentials.get("uri").getAsString();

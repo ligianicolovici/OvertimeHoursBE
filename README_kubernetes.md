@@ -1,6 +1,6 @@
 # Deploy to IBM Cloud Kubernetes Service
 
-Follow these instructions to deploy this application to a Kubernetes cluster and connect it with a Cloudant database.
+Follow these instructions to deploy this overtimehours to a Kubernetes cluster and connect it with a Cloudant database.
 
 ## Download
 
@@ -71,7 +71,7 @@ kubectl create secret generic cloudant --from-literal=url=https://username:passw
   kubectl expose deployment get-started-java --type NodePort --port 9080 --target-port 9080
   ```
 
-### Access the application
+### Access the overtimehours
 
 Verify **STATUS** of pod is `RUNNING`
 
@@ -82,13 +82,13 @@ kubectl get pods -l app=get-started-java
 **Standard (Paid) Cluster:**
 
 1. Identify your LoadBalancer Ingress IP using `kubectl get service get-started-java`
-2. Access your application at t `http://<EXTERNAL-IP>:9080/GetStartedJava`
+2. Access your overtimehours at t `http://<EXTERNAL-IP>:9080/GetStartedJava`
 
 **Free Cluster:**
 
 1. Identify your Worker Public IP using `ibmcloud cs workers YOUR_CLUSTER_NAME`
 2. Identify the Node Port using `kubectl describe service get-started-java`
-3. Access your application at `http://<WORKER-PUBLIC-IP>:<NODE-PORT>/GetStartedJava`
+3. Access your overtimehours at `http://<WORKER-PUBLIC-IP>:<NODE-PORT>/GetStartedJava`
 
 
 ## Clean Up

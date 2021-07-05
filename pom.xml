@@ -3,19 +3,40 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>net.wasdev.maven.parent</groupId>
-        <artifactId>java7-parent</artifactId>
-        <version>1.4</version>
-        <relativePath></relativePath>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.4.3</version>
+        <relativePath/> <!-- lookup parent from repository -->
     </parent>
+    <groupId>overtime-hours</groupId>
+    <artifactId>overtimeHours</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>overtimeHours</name>
+    <description>Overtime hours counter</description>
+    <properties>
+        <java.version>1.8</java.version>
+        <jaction.xml.version>2.12.3</jaction.xml.version>
+    </properties>
 
-    <groupId>net.wasdev.wlp.sample</groupId>
-    <artifactId>GetStartedJava</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>war</packaging>
+<!--    <parent>-->
+<!--        <groupId>net.wasdev.maven.parent</groupId>-->
+<!--        <artifactId>java8-parent</artifactId>-->
+<!--        <version>1.4</version>-->
+<!--        <relativePath></relativePath>-->
 
-    <name>IBM Cloud Getting Started</name>
-    <url>https://bluemix.net</url>
+<!--    </parent>-->
+
+<!--    <groupId>net.wasdev.wlp.sample</groupId>-->
+<!--    <artifactId>overtimeHours</artifactId>-->
+<!--    <version>1.0-SNAPSHOT</version>-->
+<!--    <packaging>war</packaging>-->
+
+<!--    <name>IBM Cloud Getting Started</name>-->
+<!--    <url>https://bluemix.net</url>-->
+<!--    <description>Overtime hours counter</description>-->
+<!--    <properties>-->
+<!--        <java.version>1.8</java.version>-->
+<!--    </properties>-->
 
     <licenses>
         <license>
@@ -42,30 +63,96 @@
             <version>3.1.1</version>
             <scope>test</scope>
         </dependency>
+
         
+<!--        <dependency>-->
+<!--            <groupId>org.apache.geronimo.specs</groupId>-->
+<!--            <artifactId>geronimo-servlet_3.0_spec</artifactId>-->
+<!--            <scope>provided</scope>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-core</artifactId>-->
+<!--            <version>${jaction.xml.version}</version>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>com.fasterxml.jackson.core</groupId>-->
+<!--            <artifactId>jackson-databind</artifactId>-->
+<!--            <version>${jaction.xml.version}</version>-->
+<!--        </dependency>-->
         <dependency>
-            <groupId>org.apache.geronimo.specs</groupId>
-            <artifactId>geronimo-servlet_3.0_spec</artifactId>
-            <scope>provided</scope>
-        </dependency>
-        
-	    <dependency>
 	        <groupId>org.mongodb</groupId>
 	        <artifactId>mongodb-driver</artifactId>
 	        <version>3.4.2</version>
 	    </dependency>
-	
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>8.0.23</version>
+        </dependency>
 		<dependency>
 			<groupId>com.cloudant</groupId>
 			<artifactId>cloudant-client</artifactId>
 			<version>2.7.0</version>
 		</dependency>
-		
+
 		<dependency>
 		    <groupId>javax.ws.rs</groupId>
 		    <artifactId>javax.ws.rs-api</artifactId>
 		    <version>2.0</version>
 		</dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-autoconfigure</artifactId>
+            <version>2.4.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.18</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.4.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>jakarta.persistence</groupId>
+            <artifactId>jakarta.persistence-api</artifactId>
+            <version>2.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.5.0</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.3.4.RELEASE</version><!--$NO-MVN-MAN-VER$-->
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <version>2.4.3</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+            <version>5.3.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.firebase</groupId>
+            <artifactId>firebase-admin</artifactId>
+            <version>6.11.0</version>
+        </dependency>
 
     </dependencies>
 
@@ -84,6 +171,18 @@
                     <groupId>net.wasdev.wlp.maven.plugins</groupId>
                     <artifactId>liberty-maven-plugin</artifactId>
                     <version>1.2.1</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-maven-plugin</artifactId>
+                    <configuration>
+                        <excludes>
+                            <exclude>
+                                <groupId>org.projectlombok</groupId>
+                                <artifactId>lombok</artifactId>
+                            </exclude>
+                        </excludes>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
