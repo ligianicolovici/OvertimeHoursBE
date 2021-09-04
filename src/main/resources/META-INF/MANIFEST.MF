@@ -1,0 +1,2 @@
+Main-Class: overtimehours.OvertimeHoursApplication
+Class-Path: core.jar lib/ properties/

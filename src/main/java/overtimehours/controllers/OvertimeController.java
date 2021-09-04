@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import overtimehours.dtos.OvertimeDto;
-import overtimehours.exceptions.RecordNotFoundException;
 import overtimehours.services.OvertimeService;
 
 import java.util.List;

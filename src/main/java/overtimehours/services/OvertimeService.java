@@ -7,21 +7,17 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import overtimehours.dtos.OvertimeDto;
 import overtimehours.entities.Overtime;
-import overtimehours.exceptions.RecordNotFoundException;
 import overtimehours.mappers.OvertimeMapper;
-import overtimehours.repositories.RecordsRepository;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.concurrent.ExecutionException;
 
 @Service
 @RequiredArgsConstructor
 public class OvertimeService {
-    private final RecordsRepository recordsRepository;
     private final OvertimeMapper overtimeMapper;
     private final static Integer DAILY_QUANTUM = 8;
     public static final String COL_NAME = "records";
